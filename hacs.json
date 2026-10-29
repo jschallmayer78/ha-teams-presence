@@ -1,0 +1,5 @@
+{
+  "name": "Microsoft Teams Presence",
+  "homeassistant": "2025.5.0",
+  "render_readme": true
+}

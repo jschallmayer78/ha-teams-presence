@@ -1,0 +1,17 @@
+{
+  "domain": "teams_presence",
+  "name": "Microsoft Teams Presence",
+  "codeowners": [
+    "@jschallmayer78"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "application_credentials"
+  ],
+  "documentation": "https://github.com/jschallmayer78/ha-teams-presence",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/jschallmayer78/ha-teams-presence/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}

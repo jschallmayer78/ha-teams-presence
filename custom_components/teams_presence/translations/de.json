@@ -1,0 +1,100 @@
+{
+  "application_credentials": {
+    "description": "Lege im [Microsoft Entra Admin Center]({portal_url}) eine App-Registrierung an. Unterstützte Kontotypen: *Konten in einem beliebigen Organisationsverzeichnis*. Füge eine **Web**-Umleitungs-URI `{redirect_url}` hinzu, erstelle einen geheimen Clientschlüssel und erteile die delegierten Graph-Berechtigungen `Presence.Read`, `User.Read` und `offline_access`. Trage unten die Anwendungs-(Client-)ID und den Wert des geheimen Schlüssels ein."
+  },
+  "config": {
+    "step": {
+      "pick_implementation": {
+        "title": "Authentifizierungsmethode wählen"
+      },
+      "reauth_confirm": {
+        "title": "Erneut anmelden",
+        "description": "Die Microsoft-Teams-Presence-Integration muss dein Konto erneut authentifizieren."
+      }
+    },
+    "abort": {
+      "already_configured": "Konto ist bereits eingerichtet",
+      "already_in_progress": "Einrichtung läuft bereits",
+      "cannot_connect": "Verbindung zu Microsoft Graph fehlgeschlagen",
+      "oauth_error": "Ungültige Token-Daten erhalten.",
+      "oauth_failed": "Fehler beim Abrufen des Zugriffstokens.",
+      "oauth_timeout": "Zeitüberschreitung beim Abrufen des OAuth-Tokens.",
+      "oauth_unauthorized": "OAuth-Autorisierungsfehler beim Abrufen des Zugriffstokens.",
+      "missing_configuration": "Die Integration ist nicht konfiguriert. Bitte zuerst Anwendungsanmeldedaten hinzufügen.",
+      "missing_credentials": "Die Integration benötigt Anwendungsanmeldedaten.",
+      "authorize_url_timeout": "Zeitüberschreitung beim Erzeugen der Autorisierungs-URL.",
+      "no_url_available": "Keine URL verfügbar.",
+      "user_rejected_authorize": "Kontoverknüpfung abgelehnt.",
+      "reauth_successful": "Erneute Anmeldung erfolgreich",
+      "wrong_account": "Du hast dich mit einem anderen Konto als dem eingerichteten angemeldet."
+    },
+    "create_entry": {
+      "default": "Erfolgreich authentifiziert"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Optionen",
+        "data": {
+          "scan_interval": "Abfrageintervall (Sekunden)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "availability": {
+        "name": "Verfügbarkeit",
+        "state": {
+          "available": "Verfügbar",
+          "available_idle": "Verfügbar (inaktiv)",
+          "away": "Abwesend",
+          "be_right_back": "Bin gleich zurück",
+          "busy": "Beschäftigt",
+          "busy_idle": "Beschäftigt (inaktiv)",
+          "do_not_disturb": "Nicht stören",
+          "offline": "Offline",
+          "presence_unknown": "Unbekannt"
+        }
+      },
+      "activity": {
+        "name": "Aktivität",
+        "state": {
+          "available": "Verfügbar",
+          "away": "Abwesend",
+          "be_right_back": "Bin gleich zurück",
+          "busy": "Beschäftigt",
+          "do_not_disturb": "Nicht stören",
+          "in_a_call": "Im Anruf",
+          "in_a_conference_call": "In einer Telefonkonferenz",
+          "inactive": "Inaktiv",
+          "in_a_meeting": "In einer Besprechung",
+          "offline": "Offline",
+          "off_work": "Feierabend",
+          "out_of_office": "Nicht im Büro",
+          "presence_unknown": "Unbekannt",
+          "presenting": "Präsentiert",
+          "urgent_interruptions_only": "Nur dringende Unterbrechungen"
+        }
+      },
+      "status_message": {
+        "name": "Statusnachricht"
+      }
+    },
+    "binary_sensor": {
+      "in_call": {
+        "name": "In Anruf oder Besprechung"
+      },
+      "busy": {
+        "name": "Beschäftigt"
+      },
+      "online": {
+        "name": "Online"
+      },
+      "out_of_office": {
+        "name": "Abwesenheitsnotiz aktiv"
+      }
+    }
+  }
+}

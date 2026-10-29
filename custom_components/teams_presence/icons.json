@@ -1,0 +1,49 @@
+{
+  "entity": {
+    "sensor": {
+      "availability": {
+        "default": "mdi:microsoft-teams",
+        "state": {
+          "available": "mdi:check-circle",
+          "available_idle": "mdi:check-circle-outline",
+          "away": "mdi:clock-outline",
+          "be_right_back": "mdi:clock-fast",
+          "busy": "mdi:minus-circle",
+          "busy_idle": "mdi:minus-circle-outline",
+          "do_not_disturb": "mdi:minus-circle-off",
+          "offline": "mdi:close-circle-outline"
+        }
+      },
+      "activity": {
+        "default": "mdi:account-voice",
+        "state": {
+          "in_a_call": "mdi:phone-in-talk",
+          "in_a_conference_call": "mdi:phone-in-talk",
+          "in_a_meeting": "mdi:account-group",
+          "presenting": "mdi:presentation-play"
+        }
+      },
+      "status_message": {
+        "default": "mdi:message-text-outline"
+      }
+    },
+    "binary_sensor": {
+      "in_call": {
+        "default": "mdi:phone-off",
+        "state": { "on": "mdi:phone-in-talk" }
+      },
+      "busy": {
+        "default": "mdi:check-circle",
+        "state": { "on": "mdi:minus-circle" }
+      },
+      "online": {
+        "default": "mdi:account-off",
+        "state": { "on": "mdi:account-check" }
+      },
+      "out_of_office": {
+        "default": "mdi:briefcase",
+        "state": { "on": "mdi:airplane" }
+      }
+    }
+  }
+}

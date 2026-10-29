@@ -1,0 +1,100 @@
+{
+  "application_credentials": {
+    "description": "Create an app registration in the [Microsoft Entra admin center]({portal_url}). Supported account types: *Accounts in any organizational directory*. Add a **Web** redirect URI `{redirect_url}`, create a client secret, and grant the delegated Graph permissions `Presence.Read`, `User.Read` and `offline_access`. Enter the Application (client) ID and the secret value below."
+  },
+  "config": {
+    "step": {
+      "pick_implementation": {
+        "title": "Pick authentication method"
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate",
+        "description": "The Microsoft Teams Presence integration needs to re-authenticate your account."
+      }
+    },
+    "abort": {
+      "already_configured": "Account is already configured",
+      "already_in_progress": "Configuration flow is already in progress",
+      "cannot_connect": "Failed to connect to Microsoft Graph",
+      "oauth_error": "Received invalid token data.",
+      "oauth_failed": "Error while obtaining access token.",
+      "oauth_timeout": "Timeout resolving OAuth token.",
+      "oauth_unauthorized": "OAuth authorization error while obtaining access token.",
+      "missing_configuration": "The integration is not configured. Please add application credentials first.",
+      "missing_credentials": "The integration requires application credentials.",
+      "authorize_url_timeout": "Timeout generating authorize URL.",
+      "no_url_available": "No URL available.",
+      "user_rejected_authorize": "Account linking rejected.",
+      "reauth_successful": "Re-authentication was successful",
+      "wrong_account": "You signed in with a different account than the one configured."
+    },
+    "create_entry": {
+      "default": "Successfully authenticated"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "scan_interval": "Polling interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "availability": {
+        "name": "Availability",
+        "state": {
+          "available": "Available",
+          "available_idle": "Available (idle)",
+          "away": "Away",
+          "be_right_back": "Be right back",
+          "busy": "Busy",
+          "busy_idle": "Busy (idle)",
+          "do_not_disturb": "Do not disturb",
+          "offline": "Offline",
+          "presence_unknown": "Unknown"
+        }
+      },
+      "activity": {
+        "name": "Activity",
+        "state": {
+          "available": "Available",
+          "away": "Away",
+          "be_right_back": "Be right back",
+          "busy": "Busy",
+          "do_not_disturb": "Do not disturb",
+          "in_a_call": "In a call",
+          "in_a_conference_call": "In a conference call",
+          "inactive": "Inactive",
+          "in_a_meeting": "In a meeting",
+          "offline": "Offline",
+          "off_work": "Off work",
+          "out_of_office": "Out of office",
+          "presence_unknown": "Unknown",
+          "presenting": "Presenting",
+          "urgent_interruptions_only": "Urgent interruptions only"
+        }
+      },
+      "status_message": {
+        "name": "Status message"
+      }
+    },
+    "binary_sensor": {
+      "in_call": {
+        "name": "In call or meeting"
+      },
+      "busy": {
+        "name": "Busy"
+      },
+      "online": {
+        "name": "Online"
+      },
+      "out_of_office": {
+        "name": "Out of office"
+      }
+    }
+  }
+}
